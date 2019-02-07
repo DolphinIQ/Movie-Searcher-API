@@ -1,0 +1,30 @@
+<% include partials/header %>
+
+<% include partials/searchBar %>
+
+<div class="container">
+	
+	<hr class="style-eight">
+	<div class="title">Results for "<%= search %>" </div>
+	<hr class="style-eight"> 
+	
+	<div class="row flex movies-list">
+	<% data["Search"].forEach(function(movie){ %>
+		<div class="col-md-4 col-sm-6 col-xs-12"> 
+			<div class="movie"><a href="/movie/<%= movie["imdbID"] %>"> 
+				<div class="movie-bg"></div>
+				<div class="thumbnail">
+					<img alt=<%= movie["Title"] %> src=<%= movie["Poster"] %> >
+				</div>
+				
+				<h2> <%= movie["Title"] %> - <%= movie["Year"] %> </h2>
+			</a></div>
+		</div>
+	<% }); %>
+		<div class="clear"></div>
+	</div>
+	
+</div>
+
+
+<% include partials/footer %>

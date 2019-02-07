@@ -1,0 +1,20 @@
+<% include partials/header %>
+
+<% include partials/searchBar %>
+
+<% if(status == false){ %>
+	<div class="fail">No movie with that title has been found :(</div>
+<% } %>
+
+<div class="intro">
+	<p style="text-indent: 30px">Preview movies with the awesome Movie Previewer web application. Make use of OMDb API to find your favorite films!</p>
+	<p>Not sure what to look for? Here are some recommendations: </p>
+	<ul>
+		<li> Batman </li>
+		<li> Star Wars </li>
+		<li> Harry Potter </li>
+	</ul>
+</div>
+
+
+<% include partials/footer %>
